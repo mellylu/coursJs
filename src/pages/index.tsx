@@ -1,10 +1,23 @@
+import Button from '@/components/button'
 import WithSubnavigation from '@/components/navigation'
 import TitlePage from '@/components/titlepage'
+import React, {useState} from "react"
 
 import Head from 'next/head'
 
 export default function Home() {
-  return (
+    const [isVisible, setIsVisible] = useState(false)
+    
+    const afficher = () => {
+      if (isVisible){
+        setIsVisible(false)
+      }
+      else{
+        setIsVisible(true)
+      }
+    }
+  
+    return (
     <>
       <Head>
         <title>Create Next App</title>
@@ -19,7 +32,11 @@ export default function Home() {
           <p>xxxxxxxxx</p>
           <p>xxxxxxxxx</p>
           <p>xxxxxxxxx</p>
-          {/* <Simple /> */}
+          <br />
+          <Button title="Afficher" style={{backgroundColor:"red", padding:5, borderRadius:5, color:"white"}} onClick={()=>{afficher()}}/>
+          {isVisible?
+            <p>HHHHHHHHHHHHHHHHHH</p>
+          :""}
         </div>
 
       </main>
