@@ -17,6 +17,8 @@ export default function Home() {
           <TitlePage title="Home" />
           <p>xxxxxxxxx</p>
           <p>xxxxxxxxx</p>
+          <p>xxxxxxxxx</p>
+          <p>xxxxxxxxx</p>
           {/* <Simple /> */}
         </div>
 
