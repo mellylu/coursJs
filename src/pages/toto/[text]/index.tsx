@@ -1,4 +1,5 @@
 import TitlePage from '@/components/titlepage';
+import Success from '@/components/success';
 import { NextPageContext } from 'next';
 import React from 'react';
 
@@ -7,7 +8,7 @@ const Index = (props:any) => {
     return (
         <div style={{marginLeft:"10%", marginRight:"10%"}}>
             <TitlePage title="Infos"/>
-            <p>{props.data.text}</p>
+            <Success title={props.data.text} />
         </div>
     );
 };
